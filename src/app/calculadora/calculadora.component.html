@@ -1,0 +1,24 @@
+<form action="">
+
+  <label for="">Número 1: </label>
+  <!--BananaInbox
+  Atajo a- + elegir ngModel-->
+  <input type="text" [(ngModel)]="num1" name="num1"><br><br>
+
+  <label for="">Número 2: </label>
+  <input type="text" [(ngModel)]="num2" name="num2"><br><br>
+
+  <!--EventBilding-->
+  <input type="submit" value="Sumar" (click)="sumar()"><br><br>
+  <input type="submit" value="Restar" (click)="restar()"><br><br>
+  <input type="submit" value="Multiplicar" (click)="multiplicar()"><br><br>
+  <input type="submit" value="Dividir" (click)="dividir()"><br><br>
+
+  <p>Resultado: {{resultado}}</p>
+
+</form>
+
+<br><br>
+
+
+

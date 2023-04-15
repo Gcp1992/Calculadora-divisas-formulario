@@ -1,0 +1,19 @@
+<h1>Calculadora Divisas</h1>
+
+<label for="numero">Introduce cifra: </label>
+<input type="text" [(ngModel)]="cifra" (ngModelChange)="calcularDivisa()"><br><br>
+
+<label for="divisas">Elije una divisa:</label>
+<select name="divisa" id="">
+  <!--ngModel: directiva para enlazar valores seleccionados del formulario con los
+  valores seleccionados del componente. Permite que los métodos del ts tengan acceso a la cantidad
+  ingresada y al valor de cambio de divisa seleccionada-->
+  <option value="Yen japonés" [(ngModel)]="jenJapones" name="jenJapones">Yen japonés</option>
+  <option value="Libra" [(ngModel)]="libras" name="libras">Libra</option>
+  <option value="Dolar" [(ngModel)]="dolares" name="dolares">Dólar</option>
+</select>
+
+<br><br>
+<p>Resultado: {{resultado}}</p>
+
+

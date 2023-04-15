@@ -1,0 +1,40 @@
+<h1>Datos de compra</h1>
+
+<form>
+  <label for="correo">Correo electrónico: </label>
+    <input type="email" [(ngModel)]="email" name="email"><br><br>
+  <label for="direccion">Dirección: </label>
+    <textarea name="direccion" [(ngModel)]="direccion" name="direccion"></textarea><br><br>
+  <label for="telefono">Teléfono: </label>
+    <input type="text" name="telefono" [(ngModel)]="telefono" name="telefono"><br><br>
+  <label for="comunidad">Comunidad: </label>
+    <select [(ngModel)]="comunidad">
+      <option value="madrid">Madrid</option>
+      <option value="valencia">Valencia</option>
+      <option value="andalucía">Andalucía</option>
+    </select>
+  <br><br>
+  <p>Forma de pago:</p>
+  <input type="radio" [(ngModel)]="pago" name="pago" value="Efectivo">
+  <label for="Efectivo">Efectivo</label><br>
+  <input type="radio" [(ngModel)]="pago" name="pago" value="Tarjeta">
+  <label for="Tarjeta">Tarjeta</label><br>
+  <input type="radio" [(ngModel)]="pago" name="pago" value="ContraRembolso">
+  <label for="ContraRembolso">Contra rembolso</label><br>
+  <br>
+  <label for="info">Acepto recibir informacion de sus productos</label>
+  <input type="checkbox" name="info" [(ngModel)]="aceptar">
+
+</form>
+<br>
+<input type="submit" value="Enviar"><br><br>
+
+<pre>
+  <p>Correo electrónico: {{email}}</p>
+  <p>Dirección: {{direccion}}</p>
+  <p>Teléfono: {{telefono}}</p>
+  <p>Comunidad: {{comunidad}}</p>
+  <p>Forma de pago: {{pago}}</p>
+  <p>Recibe información: {{aceptar}}</p>
+
+</pre>
